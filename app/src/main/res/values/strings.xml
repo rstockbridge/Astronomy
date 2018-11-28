@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Astronomy</string>
+    <string name="wrong_message">%1$s\n\nSomething has gone wrong!</string>
+    <string name="future_date">%1$s\n\nDate is in the future!</string>
+    <string name="change_date">Change Date</string>
+    <string name="astronomy_picture_of_the_day">Astronomy picture of the day</string>
+    <string name="share">Share</string>
+</resources>
