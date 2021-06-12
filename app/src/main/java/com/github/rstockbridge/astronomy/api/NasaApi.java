@@ -1,9 +1,10 @@
 package com.github.rstockbridge.astronomy.api;
 
-import com.github.rstockbridge.astronomy.BuildConfig;
-import com.github.rstockbridge.astronomy.api.models.DailyPicture;
-
 import androidx.annotation.NonNull;
+
+import com.github.rstockbridge.astronomy.api.models.DailyPicture;
+import com.github.rstockbridge.astronomy.util.ApiKeyLibrary;
+
 import io.reactivex.Single;
 
 public final class NasaApi {
@@ -26,6 +27,6 @@ public final class NasaApi {
     }
 
     public Single<DailyPicture> getDailyPicture(@NonNull final String inputDate) {
-        return service.getDailyPicture(inputDate, BuildConfig.NASA_APOD_KEY);
+        return service.getDailyPicture(inputDate, ApiKeyLibrary.getInstance().getAPIKey());
     }
 }

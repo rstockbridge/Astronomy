@@ -2,17 +2,22 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
+    ndkVersion '21.4.7075529'
     defaultConfig {
         applicationId "com.github.rstockbridge.astronomy"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        buildConfigField "String", "NASA_APOD_KEY", nasaApodKey
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
+        }
     }
 }
 
